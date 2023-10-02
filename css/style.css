@@ -5,6 +5,11 @@
 
 }
 
+.debug{
+ 
+  border: 2px solid black;
+ }
+ 
 .background {
   height: 100vh; /* Imposta l'altezza al 100% della viewport height */
   background: linear-gradient(to bottom,  #2F9688 20%,  #D7DBD6 20%,  #D7DBD6 100% );
@@ -12,12 +17,94 @@
 
 .my-container{
   margin: 0 auto;
-  width: 75%;
-  max-width: 1600px;
+  height: 100%;
+  padding: 20px;
+  max-width: 1300px;
+  
+}
+/***** ASIDE*****/
+.aside{
+  height: 100%;
 }
 
-.debug{
- 
-  height: 95vh;
- border: 2px solid black;
+.block-user{
+  background-color: #D7DBD6;
+  width: 100%;
+  height: 70px;
 }
+
+.user-left img{
+  border-radius: 50%;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.user-left span {
+  margin-left: 5px;
+}
+
+.user-right i{
+  color: #B1B1B1;
+  margin: 7px;
+  font-size: 1.3rem;
+}
+
+.user-new-message{
+  background-color: #8EDAFC;
+  width: 100%;
+  height: 80px;
+
+}
+
+.user-new-message i{
+  font-size: 1.5rem;
+  color: #8EDAFC;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 2;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.user-text a{
+  color: #837B80;
+  
+}
+
+.search {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 50px;
+}
+
+.header-center {
+  background-color: white;
+  width: 96%;
+}
+
+.custom-input {
+  background-color: white;
+  box-shadow: none;
+  border: none;
+}
+
+.custom-input:focus {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.container-search {
+
+  border: 1px solid #837B80;
+}
+
+
+
+/*****MAIN CHAT*****/
+
+.main-chat{
+  height: 100%;
+}
+

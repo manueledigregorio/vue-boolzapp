@@ -28,15 +28,66 @@
     <!--inizio background-->
     <div class="background">
        <!--inizio contenitore-->
-      <div class="container-fluid my-container ">
+      <div class=" my-container debug">
 
-        <div class="row d-flex align-items-center ">
-          <div class="col-4 aside debug  ">
-              ciao
+        <div class="row h-100 ">
+          <!--inizio colonna di sinistra -->
+          <div class="col-4 aside debug p-0 ">
+            <!--block superiore-->
+            <div class="superiore">
+              <div class="block-user d-flex justify-content-between align-items-center">
+                
+                <div class="user-left d-flex align-items-center">
+                  <img src="img/avatar_io.jpg" alt="avatar_io">
+                  <span>Sofia</span>
+                </div>
+
+                <div class="user-right d-flex align-items-center">
+                  <i class="fa-solid fa-circle-notch"></i>
+                  <i class="fa-solid fa-message"></i>
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                
+              </div>
+
+              <div class="user-new-message d-flex align-items-center">
+
+                  <i class="fa-solid fa-bell-slash"></i>
+            
+                <div class="user-text m-3">
+                  <p class="m-0">Ricevi notifiche di nuovi messagi</p>
+                  <a href="#">Attiva notifiche desktop</a>
+                </div>
+              </div>
+
+              <div class="search d-flex align-items-center justify-content-center">
+                <div class="header-center px-3 d-flex align-items-center ">
+                  <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                  <form class="w-100">
+                    <input
+                      class="form-control custom-input me-2"
+                      type="search"
+                      placeholder="Cerca o inizia una nuova chat"
+                      aria-label="Search"
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+              
+             
+              <!--block inferiore-->
+              <div class="block-contact">
+
+              </div>
           </div>
+          <!--fine colonna di sinistra -->
+
+          <!--inizio colonna di destra -->
           <div class="col-8 main-chat debug">
             hello
           </div>
+           <!--fine colonna di destra -->
         </div>
        
       </div>
