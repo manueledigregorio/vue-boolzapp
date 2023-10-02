@@ -84,6 +84,13 @@
   width: 96%;
 }
 
+.header-center i{
+  color: #B1B1B1;
+  
+  
+}
+
+
 .custom-input {
   background-color: white;
   box-shadow: none;
@@ -96,8 +103,34 @@
 }
 
 .container-search {
-
   border: 1px solid #837B80;
+}
+
+.t-search{
+  width: 15%;
+  text-align: center;
+}
+
+.form-search{
+  width: 85%;
+}
+
+/****block inferiore***/
+ 
+.block-contact{
+  overflow: hidden;
+
+}
+
+.contact{
+  width: 96%;
+  height: 80px;
+  background-color: white;
+}
+
+.contact img{
+  border-radius: 50%;
+  width: 65px;
 }
 
 
@@ -107,4 +140,5 @@
 .main-chat{
   height: 100%;
 }
+
 

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512- 
-  iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous"/>
+  iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" />
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
@@ -20,14 +21,15 @@
   <link rel="stylesheet" href="css/style.css">
 
 
- 
+
   <title>app</title>
 </head>
+
 <body>
   <div id="app">
     <!--inizio background-->
     <div class="background">
-       <!--inizio contenitore-->
+      <!--inizio contenitore-->
       <div class=" my-container debug">
 
         <div class="row h-100 ">
@@ -36,7 +38,7 @@
             <!--block superiore-->
             <div class="superiore">
               <div class="block-user d-flex justify-content-between align-items-center">
-                
+
                 <div class="user-left d-flex align-items-center">
                   <img src="img/avatar_io.jpg" alt="avatar_io">
                   <span>Sofia</span>
@@ -47,13 +49,13 @@
                   <i class="fa-solid fa-message"></i>
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
-                
+
               </div>
 
               <div class="user-new-message d-flex align-items-center">
 
-                  <i class="fa-solid fa-bell-slash"></i>
-            
+                <i class="fa-solid fa-bell-slash"></i>
+
                 <div class="user-text m-3">
                   <p class="m-0">Ricevi notifiche di nuovi messagi</p>
                   <a href="#">Attiva notifiche desktop</a>
@@ -62,24 +64,30 @@
 
               <div class="search d-flex align-items-center justify-content-center">
                 <div class="header-center px-3 d-flex align-items-center ">
-                  <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                  <form class="w-100">
-                    <input
-                      class="form-control custom-input me-2"
-                      type="search"
-                      placeholder="Cerca o inizia una nuova chat"
-                      aria-label="Search"
-                    />
+                  <div class="t-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <form class="form-search">
+                    <input class="form-control custom-input me-2" type="search"
+                      placeholder="Cerca o inizia una nuova chat" aria-label="Search" />
                   </form>
                 </div>
               </div>
             </div>
-              
-             
-              <!--block inferiore-->
-              <div class="block-contact">
 
+
+            <!--inizio block inferiore-->
+            <div class="block-contact">
+
+              <div class="contact d-flex align-items-center ">
+                <img src="img/avatar_1.jpg" alt="">
               </div>
+              <div class="text-contact">
+                <h5>Michiele</h5>
+                <p>Ultimo messagio inviato</p>
+              </div>
+
+            </div>
           </div>
           <!--fine colonna di sinistra -->
 
@@ -87,14 +95,15 @@
           <div class="col-8 main-chat debug">
             hello
           </div>
-           <!--fine colonna di destra -->
+          <!--fine colonna di destra -->
         </div>
-       
+
       </div>
-       <!--fine contenitore-->
+      <!--fine contenitore-->
     </div>
-     <!--fine background-->
+    <!--fine background-->
   </div>
   <script src="js/script.js"></script>
 </body>
+
 </html>
