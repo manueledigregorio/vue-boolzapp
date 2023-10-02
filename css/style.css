@@ -5,6 +5,19 @@
 
 }
 
-.background{
-  background: linear-gradient(to right, #ffcc00, #ff3300);
+.background {
+  height: 100vh; /* Imposta l'altezza al 100% della viewport height */
+  background: linear-gradient(to bottom,  #2F9688 20%,  #D7DBD6 20%,  #D7DBD6 100% );
+}
+
+.my-container{
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1600px;
+}
+
+.debug{
+ 
+  height: 95vh;
+ border: 2px solid black;
 }
