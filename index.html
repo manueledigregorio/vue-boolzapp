@@ -32,9 +32,9 @@
       <!--inizio contenitore-->
       <div class=" my-container debug">
 
-        <div class="row h-100 ">
+        <div class="row pt-4  h-100 ">
           <!--inizio colonna di sinistra -->
-          <div class="col-4 aside debug p-0 ">
+          <div class="col-4 aside  p-0 ">
             <!--block superiore-->
             <div class="superiore">
               <div class="block-user d-flex justify-content-between align-items-center">
@@ -67,10 +67,10 @@
                   <div class="t-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
-                  <form class="form-search">
+                  <div class="form-search">
                     <input class="form-control custom-input me-2" type="search"
                       placeholder="Cerca o inizia una nuova chat" aria-label="Search" />
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,23 +78,61 @@
 
             <!--inizio block inferiore-->
             <div class="block-contact">
+              
+              <div v-for="(contact, index) in contacts" class=" contact d-flex justify-content-between  ">
+                <div class="d-flex align-items-center ">
+                  <img :src="contact.avatar" alt="">
 
-              <div class="contact d-flex align-items-center ">
-                <img src="img/avatar_1.jpg" alt="">
+                  <div class="text-contact mx-3 ">
+                    <h5>{{contact.name}}</h5>
+                    <p>Ultimo messagio inviato</p>
+                  </div>
+                </div> 
+                <span >12:00</span>
+                
+              
               </div>
-              <div class="text-contact">
-                <h5>Michiele</h5>
-                <p>Ultimo messagio inviato</p>
-              </div>
-
+              
             </div>
           </div>
           <!--fine colonna di sinistra -->
 
           <!--inizio colonna di destra -->
-          <div class="col-8 main-chat debug">
-            hello
+          <div class="col-8 main-chat p-0 ">
+            <div class="block-user bar-right d-flex justify-content-between align-items-center">
+
+              <div class="user-left d-flex align-items-center">
+                <img src="img/avatar_io.jpg" alt="avatar_io">
+                <span>Sofia</span>
+              </div>
+
+              <div class="user-right d-flex align-items-center">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
           </div>
+
+          <div class="chat">
+            
+          </div>
+
+          <div class="bar-bottom-chat d-flex justify-content-around  align-items-center ">
+
+          
+              <i class=" left fa-regular fa-face-smile"></i>
+            
+
+            <div class="form-search">
+              <input class="form-control form-control-lg" type="text" placeholder="scrivi un messaggio" aria-label=".form-control-lg example">
+            </div>
+
+            
+              <i class=" right fa-solid fa-microphone"></i>
+            
+
+          </div>
+          
           <!--fine colonna di destra -->
         </div>
 
