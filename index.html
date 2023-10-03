@@ -17,6 +17,9 @@
   <!-- Vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+  <!-- Luxon -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
+
   <!-- My style -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -68,8 +71,11 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
                   <div class="form-search">
-                    <input class="form-control custom-input me-2" type="search"
-                      placeholder="Cerca o inizia una nuova chat" aria-label="Search" />
+                    <input 
+                    v-model="search"
+                    @input="contactSearch" 
+                    class="form-control custom-input me-2" type="search"
+                    placeholder="Cerca o inizia una nuova chat" aria-label="Search" />
                   </div>
                 </div>
               </div>
@@ -79,7 +85,10 @@
             <!--inizio block inferiore-->
             <div class="block-contact">
               
-              <div v-for="(contact, index) in contacts" class=" contact d-flex justify-content-between  ">
+              <div v-for="(contact, index) in contacts" 
+                @click="counter = index"
+                :class="{'active': index === counter}"
+                  class=" contact d-flex justify-content-between  ">
                 <div class="d-flex align-items-center ">
                   <img :src="contact.avatar" alt="">
 
@@ -102,8 +111,8 @@
             <div class="block-user bar-right d-flex justify-content-between align-items-center">
 
               <div class="user-left d-flex align-items-center">
-                <img src="img/avatar_io.jpg" alt="avatar_io">
-                <span>Sofia</span>
+                <img :src="contacts[counter].avatar" alt="avatar_io">
+                <span>{{contacts[counter].name}}</span>
               </div>
 
               <div class="user-right d-flex align-items-center">
@@ -114,7 +123,17 @@
           </div>
 
           <div class="chat">
-            
+            <div v-for="message in contacts[counter].messages " class="clearfix">
+              <div v-if="message.status === 'sent'" class=" clearfix sent" >
+                <span>{{message.message}}</span>
+                <span class="time" >{{changeDate(message.date)}}</span>
+              </div>
+              <div v-else class=" clearfix received " >
+                <span>{{message.message}}</span>
+                <span class="time">{{changeDate(message.date)}}</span>
+              </div>
+            </div>
+          
           </div>
 
           <div class="bar-bottom-chat d-flex justify-content-around  align-items-center ">
@@ -124,7 +143,7 @@
             
 
             <div class="form-search">
-              <input class="form-control form-control-lg" type="text" placeholder="scrivi un messaggio" aria-label=".form-control-lg example">
+              <input @keyup.enter="addChat" v-model.trim="newMessage" class="form-control form-control-lg" type="text" placeholder="scrivi un messaggio" aria-label=".form-control-lg example">
             </div>
 
             

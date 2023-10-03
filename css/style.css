@@ -12,7 +12,7 @@
  
 .background {
   height: 100vh; /* Imposta l'altezza al 100% della viewport height */
-  background: linear-gradient(to bottom,  #2F9688 30%,  #D7DBD6 30%,  #D7DBD6 100% );
+  background: linear-gradient(to bottom,  #2F9688 15%,  #D7DBD6 15%,  #D7DBD6 100% );
 }
 
 .my-container{
@@ -28,7 +28,7 @@
 }
 
 .block-user{
-  background-color: #D7DBD6;
+  background-color: #EAEAEA;
   width: 100%;
   height: 70px;
 }
@@ -81,7 +81,7 @@
 
 .header-center {
   background-color: white;
-  width: 96%;
+  width: 95%;
 }
 
 .header-center i{
@@ -128,6 +128,10 @@
   
 }
 
+.contact.active{
+  background-color: #E9EBEB;
+}
+
 .contact span {
   margin-top: 3px;
   margin-right: 5px;
@@ -145,7 +149,7 @@
 }
 
 .text-contact p,
-.contact span{
+span.contact {
   color: #B1B1B1;
 }
 
@@ -153,6 +157,26 @@
 
 .main-chat{
   height: 100%;
+}
+
+.sent{
+  width: 300px;
+  float:right;
+  background-color: #D5F9BA;
+  margin: 5px;
+  border-radius: 10px;
+  clear: both;
+  padding: 10px;
+}
+
+.received{
+  width: 300px;
+  float: left;
+  background-color: #FFFFFF ;
+  margin: 5px;
+  border-radius: 10px;
+  clear: both;
+  padding: 10px;
 }
 
 .bar-right{
@@ -163,16 +187,24 @@
 .chat{
   height: calc(100% - 145px);
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.chat .time{
+  float: right;
+  font-size: 0.7rem;
 }
 
 .bar-bottom-chat{
   height: 75px;
   width: 100%;
-
+  background-color: #F3EEEA;
+  
 }
 
 .bar-bottom-chat i{
-  color: #697175;
+  color: #837B80;
   font-size: 1.5rem;
 }
 

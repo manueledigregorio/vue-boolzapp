@@ -1,3 +1,4 @@
+const dt = luxon.DateTime;
 const {createApp} = Vue;
 
 createApp({
@@ -167,9 +168,53 @@ createApp({
             }
           ],
         }
-      ]
-    
+      ],
+        counter:0,
+        newMessage:'',
+        search:''
     }
-  }
+  },
+  methods: {
+    changeDate(data){
+      const dateArray = data.split(' ');
+      // La seconda parte dell'array contiene l'orario, quindi la prendiamo
+      const timeArray = dateArray[1].split(':') ;
+
+
+      const risultato= timeArray[0] + ':' + timeArray[1];
+      return risultato;
+    },
+
+
+    addChat(){
+
+      
+      const mess ={
+      date: dt.now().setLocale("it").toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+      message: this.newMessage,
+      status: 'sent'
+      }
+
+     const risposta ={
+        date: dt.now().setLocale("it").toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+        message: 'ok',
+        status: 'received'
+      } 
+      // se diverso da stringa vuota push dentro l'array di oggeti
+      if (this.newMessage !== '') {
+        this.contacts[this.counter].messages.push(mess);
+        setTimeout(() => {
+          this.contacts[this.counter].messages.push(risposta);
+        }, 1000);
+        
+      }
+      this.newMessage = ''
+    },
+    contactSearch(){
+      
+
+    }
+
+  },
 
 }).mount("#app");
