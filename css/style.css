@@ -120,7 +120,7 @@
   height: 80px;
   background-color: white;
   border-bottom: 1px solid #D7DBD6;
-  
+  padding-left: 15px;
 }
 
 .contact.active{
