@@ -4,11 +4,6 @@
   box-sizing: border-box;
 
 }
-
-.debug{
- 
-  border: 2px solid black;
- }
  
 .background {
   height: 100vh; /* Imposta l'altezza al 100% della viewport height */

@@ -33,7 +33,7 @@
     <!--inizio background-->
     <div class="background">
       <!--inizio contenitore-->
-      <div class=" my-container debug">
+      <div class=" my-container ">
 
         <div class="row pt-4  h-100 ">
           <!--inizio colonna di sinistra -->
@@ -72,10 +72,10 @@
                   </div>
                   <div class="form-search">
                     <input 
-                    v-model="search"
-                    @input="contactSearch" 
-                    class="form-control custom-input me-2" type="search"
-                    placeholder="Cerca o inizia una nuova chat" aria-label="Search" />
+                      v-model="search"
+                      class="form-control custom-input me-2" type="search"
+                      placeholder="Cerca o inizia una nuova chat" aria-label="Search" 
+                    />
                   </div>
                 </div>
               </div>
@@ -85,10 +85,12 @@
             <!--inizio block inferiore-->
             <div class="block-contact">
               
-              <div v-for="(contact, index) in contacts" 
-                @click="counter = index"
-                :class="{'active': index === counter}"
-                  class=" contact d-flex justify-content-between  ">
+                <div
+                  v-for="(contact, index) in contactsFiltered" 
+                  @click="counter = index"
+                  :class="{'active': index === counter}"
+                  class=" contact d-flex justify-content-between  "
+                  >
                 <div class="d-flex align-items-center ">
                   <img :src="contact.avatar" alt="">
 
